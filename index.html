@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Tareas Diarias</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 24px;
+            color: #343a40;
+        }
+
+        table {
+            margin-top: 20px;
+        }
+
+        th, td {
+            text-align: center;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        button {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="task-form">
+            <div class="form-group">
+                <label for="task-name">Tarea:</label>
+                <input type="text" class="form-control" id="task-name" required>
+            </div>
+            <div class="form-group">
+                <label for="task-days">Días Estimados:</label>
+                <input type="number" class="form-control" id="task-days" required>
+            </div>
+            <div class="form-group">
+                <label for="task-start-date">Fecha de Inicio:</label>
+                <input type="date" class="form-control" id="task-start-date" required>
+            </div>
+            <div class="form-group">
+                <label for="task-end-date">Fecha de Fin:</label>
+                <input type="date" class="form-control" id="task-end-date" required>
+            </div>
+            <div class="form-group">
+                <label for="task-responsible">Responsable:</label>
+                <input type="text" class="form-control" id="task-responsible" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar Tarea</button>
+        </form>
+        <h2>Historial de Tareas</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Tarea</th>
+                    <th>Días Estimados</th>
+                    <th>Fecha de Inicio</th>
+                    <th>Fecha de Fin</th>
+                    <th>Responsable</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="task-list"></tbody>
+        </table>
+    </div>
+    <script src="tasks.js"></script>
+</body>
+</html>
